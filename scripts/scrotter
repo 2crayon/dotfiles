@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+output_file=~/screenshots/"$(date +%Y-%m-%d_%H:%M:%S)".png
+
+maim -s "$output_file"
+
+xclip -sel clip -t image/png "$output_file"

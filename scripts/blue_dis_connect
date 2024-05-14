@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+choice="$(bluetoothctl devices | fzf)"
+addr=`echo $choice | cut -d" " -f2`
+name=`echo $choice | cut -d" " -f3-`
+
+[[ $addr ]] || exit 1
+
+[[ $1 ]] && (bluetoothctl disconnect "$addr" && notify-send "Bluetooth" "Disconnected from $name") \
+         || (bluetoothctl connect "$addr" && notify-send "Bluetooth" "Connected to $name")

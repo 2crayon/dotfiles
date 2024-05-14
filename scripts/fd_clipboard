@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+fdargs=""
+searchpath="/"
+
+while getopts "dfr" opt; do
+    case $opt in
+        d)
+            fdargs="-t d"
+            ;;
+        f)
+            fdargs="-t f"
+            ;;
+        r)
+            searchpath="."
+            ;;
+        \?)
+            exit 1
+            ;;
+    esac
+done
+
+chosen=$(fd . --base-directory="$searchpath" --strip-cwd-prefix -H --color  never $fdargs | fzf  --scheme=path)
+[ -z "$chosen" ] && exit 1
+
+echo `cd $searchpath && realpath "$chosen"` | xclip -sel clip -r

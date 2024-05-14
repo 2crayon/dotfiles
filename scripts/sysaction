@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+declare -A actions
+
+actions["kill xinit"]="killall xinit"
+actions["sleep"]="systemctl suspend"
+actions["shutdown"]="shutdown -h now"
+actions["reboot"]="reboot"
+
+selected=$(printf "%s\n" ${(k)actions} | fzf)
+
+[[ $selected ]] || exit 1
+
+eval $actions[$selected]

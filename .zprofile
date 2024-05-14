@@ -1,0 +1,24 @@
+#!/bin/sh
+
+export PATH="$PATH:$HOME/scripts:$HOME/appimages:$HOME/.local/bin"
+export ARCHFLAGS="-arch x86_64"
+
+export EDITOR="code"
+export VISUAL="code"
+export SUDO_EDITOR="vim"
+export TERMINAL="st"
+export BROWSER="google-chrome-stable"
+
+export PAGER="less"
+export LESS="-rMi"
+export CM_LAUNCHER="fzf"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
+
+# These env exports are not necessary, as applications
+# should fallback to these values anyways as per the
+# XDG specification, but some apps don't comply
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
