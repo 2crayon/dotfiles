@@ -147,6 +147,5 @@ eval "$(zellij setup --generate-auto-start zsh)"
 eval "$(fnm env --use-on-cd)"
 source $HOME/.local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.local/share/you-should-use.plugin.zsh
-source $HOME/.local/share/command-not-found.plugin.zsh
 
 ll
