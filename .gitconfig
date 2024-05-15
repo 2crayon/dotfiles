@@ -2,9 +2,8 @@
 	name = Ely
 	email = elyalon345@gmail.com
 
-# [credential]
-# 	helper = store
-# 	credentialStore = plaintext
+[credential]
+	helper = store
 
 [init]
 	defaultBranch = main
