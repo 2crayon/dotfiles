@@ -14,6 +14,7 @@ export LESS="-rMi"
 export CM_LAUNCHER="fzf"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
+export STOW_DIR="$HOME/dotfiles"
 
 # These env exports are not necessary, as applications
 # should fallback to these values anyways as per the

@@ -69,7 +69,7 @@ alias p='pacman'
 alias sp='sudo pacman'
 alias sd='systemctl'
 
-alias dots='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+alias stow='stow -vn'
 alias rez='source ~/.zshrc'
 alias la='ls -a'
 alias lsl='ls -l'
