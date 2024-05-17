@@ -1,4 +1,4 @@
-Explicitly installed packages on: Fri May 17 10:11:19 PM IDT 2024
+Explicitly installed packages on: Fri May 17 10:47:59 PM IDT 2024
 alacritty
 amd-ucode
 atool
@@ -33,6 +33,7 @@ gimp
 git
 git-delta
 gitui
+gnome-themes-extra
 gnu-netcat
 google-chrome
 grub
