@@ -36,7 +36,6 @@ bindkey -s "^[e" "\C-a\C-kc -^M"
 bindkey -s "^[w" "\C-a\C-kc .^M"
 bindkey -s "^[r" "\C-a\C-kc^M"
 bindkey -s "^[x" "\C-a\C-kpwdcb^M"
-bindkey -s "^[y" "\C-a\C-kgitui^M"
 
 alias r='trash-put'
 alias tl='trash-list'
@@ -68,6 +67,7 @@ alias sd='systemctl'
 
 alias dots='c ~/dotfiles'
 alias stow='stow -v'
+alias rme='cat <(echo "Packages On: $(date)") <(p -Qe | cut -d" " -f1) > ~/dotfiles/README.md'
 alias rez='source ~/.zshrc'
 alias la='ls -a'
 alias lsl='ls -l'
@@ -98,6 +98,7 @@ alias dragon-drop='frk dragon-drop -x -T'
 alias bat='bat -pn'
 alias nsxiv='frk nsxiv -a --anti-alias=no'
 
+alias gg='gitui'
 alias gc='git clone'
 alias gco='git checkout'
 alias gs='git status'
