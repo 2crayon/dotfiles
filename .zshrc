@@ -71,7 +71,7 @@ alias p='pacman'
 alias sp='sudo pacman'
 alias sd='systemctl'
 
-alias dots='c ~/dotfiles'
+alias ds='c ~/dotfiles'
 alias stow='stow -v'
 alias rme='cat <(echo "Explicitly installed packages on: $(date)") <(p -Qe | cut -d" " -f1) > ~/dotfiles/README.txt'
 alias rez='source ~/.zshrc'
