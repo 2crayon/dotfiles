@@ -1,17 +1,23 @@
 PROMPT='%B%F{#000000}%K{#54c490}(%?)%n@%m:%~%K{#54c490}$%k%f%b '
 
 HISTFILE="$HOME/.zsh_history"
-HISTSIZE=10000000
-SAVEHIST=10000000
-unsetopt EXTENDED_HISTORY
-setopt INC_APPEND_HISTORY
-setopt SHARE_HISTORY
-setopt HIST_IGNORE_DUPS
+HISTSIZE=2000
+SAVEHIST=2000
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
 
 autoload -Uz compinit && compinit
 zstyle ':completion:*' rehash true
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 _comp_options+=(globdots)
+
+bindkey -e
 
 bindkey "^X" _expand_alias
 bindkey "^[[1;3D" backward-word
@@ -113,7 +119,7 @@ helpor() {
 
 cd_into_project() {
     # A project is a folder that exists in ~/src or ~/repos
-    selected="$(fd --base-directory=$HOME . repos src -d 1 -H -t d --color never | fzf)"
+    selected="$(fd --base-directory=$HOME . repos src -d 1 -H --color never | fzf)"
     [[ $selected ]] || return
     c "$(cd $HOME && realpath $selected)"
     unset selected
