@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+while clipnotify2; do
+    notify-send -t 4000 -r 25052 "System Clipboard Changed:" "$(xclip -o -sel clip -r)"
+done
