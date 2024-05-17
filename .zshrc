@@ -67,7 +67,7 @@ alias sd='systemctl'
 
 alias dots='c ~/dotfiles'
 alias stow='stow -v'
-alias rme='cat <(echo "Packages On: $(date)") <(p -Qe | cut -d" " -f1) > ~/dotfiles/README.md'
+alias rme='cat <(echo "Packages On: $(date)") <(p -Qe | cut -d" " -f1) > ~/dotfiles/README.txt'
 alias rez='source ~/.zshrc'
 alias la='ls -a'
 alias lsl='ls -l'
