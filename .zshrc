@@ -67,7 +67,7 @@ alias sp='sudo pacman'
 alias sd='systemctl'
 
 alias dots='c ~/dotfiles'
-alias stow='stow -vn'
+alias stow='stow -v'
 alias rez='source ~/.zshrc'
 alias la='ls -a'
 alias lsl='ls -l'
@@ -145,6 +145,6 @@ cheatsheet() {
 eval "$(zellij setup --generate-auto-start zsh)"
 eval "$(fnm env --use-on-cd)"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/.local/share/you-should-use.plugin.zsh
+source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 
 ll
