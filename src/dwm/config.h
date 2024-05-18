@@ -70,36 +70,32 @@ static const char *colorpickercmd[]  = { "xcolor", "-s", "clipboard", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask|ControlMask, XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_backslash, spawn, {.v = browsercmd } },
-	{ MODKEY,                       XK_Escape, spawn, {.v = langcmd } },
-	{ MODKEY,             XK_F1,      spawn,          {.v = zoomercmd } },
-	{ MODKEY,             XK_F2,      spawn,          {.v = screenshotcmd } },
-	{ MODKEY,             XK_F3,      spawn,          {.v = colorpickercmd } },
-	{ MODKEY|ShiftMask,             XK_Return,      spawn,          SHCMD("playerctl play-pause && notify-send -t 2000 -r 25001 \"`playerctl metadata --format '({{duration(position)}}) {{artist}}'`\" \"`playerctl metadata --format '{{title}}'`\"") },
-	{ MODKEY|ShiftMask,             XK_Right,      spawn,          SHCMD("playerctl position 5+ && notify-send -t 2000 -r 25001 \"`playerctl metadata --format '(5->) {{artist}}'`\" \"`playerctl metadata --format '{{title}}'`\"") },
-	{ MODKEY|ShiftMask,             XK_Left,      spawn,          SHCMD("playerctl position 5- && notify-send -t 2000 -r 25001 \"`playerctl metadata --format '(<-5) {{artist}}'`\" \"`playerctl metadata --format '{{title}}'`\"") },
-	{ MODKEY|ShiftMask,             XK_Up,      spawn,          SHCMD("pamixer --increase 5 --allow-boost && notify-send -t 2000 -r 25001 \"Volume Increased $(pamixer --get-volume-human)\" -h int:value:\"$(pamixer --get-volume)\"") },
-	{ MODKEY|ShiftMask,             XK_Down,      spawn,          SHCMD("pamixer --decrease 5 --allow-boost && notify-send -t 2000 -r 25001 \"Volume Decreased $(pamixer --get-volume-human)\" -h int:value:\"$(pamixer --get-volume)\"") },
+	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_v,      spawn,          {.v = browsercmd } },
+	{ MODKEY,                       XK_Escape, spawn,          {.v = langcmd } },
+	{ MODKEY,                       XK_F1,     spawn,          {.v = zoomercmd } },
+	{ MODKEY,                       XK_F2,     spawn,          {.v = screenshotcmd } },
+	{ MODKEY,                       XK_F3,     spawn,          {.v = colorpickercmd } },
+	{ MODKEY|ShiftMask,             XK_Return, spawn,          SHCMD("playerctl play-pause && notify-send -t 4000 -r 25001 \"`playerctl metadata --format '({{duration(position)}}) {{artist}}'`\" \"`playerctl metadata --format '{{title}}'`\"") },
+	{ MODKEY|ShiftMask|ControlMask, XK_Right,  spawn,          SHCMD("playerctl next && sleep 0.3 && notify-send -t 4000 -r 25001 \"`playerctl metadata --format 'Now Playing: {{artist}}'`\" \"`playerctl metadata --format '{{title}}'`\"") },
+	{ MODKEY|ShiftMask|ControlMask, XK_Left,   spawn,          SHCMD("playerctl previous && sleep 0.3 && notify-send -t 4000 -r 25001 \"`playerctl metadata --format 'Now Playing: {{artist}}'`\" \"`playerctl metadata --format '{{title}}'`\"") },
+	{ MODKEY|ShiftMask,             XK_Right,  spawn,          SHCMD("playerctl position 5+ && notify-send -t 4000 -r 25001 \"`playerctl metadata --format '(5->) {{artist}}'`\" \"`playerctl metadata --format '{{title}}'`\"") },
+	{ MODKEY|ShiftMask,             XK_Left,   spawn,          SHCMD("playerctl position 5- && notify-send -t 4000 -r 25001 \"`playerctl metadata --format '(<-5) {{artist}}'`\" \"`playerctl metadata --format '{{title}}'`\"") },
+	{ MODKEY|ShiftMask,             XK_Up,     spawn,          SHCMD("pamixer --increase 5 --allow-boost && notify-send -t 4000 -r 25002 \"Volume Increased $(pamixer --get-volume-human)\" -h int:value:\"$(pamixer --get-volume)\"") },
+	{ MODKEY|ShiftMask,             XK_Down,   spawn,          SHCMD("pamixer --decrease 5 --allow-boost && notify-send -t 4000 -r 25002 \"Volume Decreased $(pamixer --get-volume-human)\" -h int:value:\"$(pamixer --get-volume)\"") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_d,      focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_a,      focusstack,     {.i = -1 } },
+	{ MODKEY,                       XK_Up,     incnmaster,     {.i = +1 } },
+	{ MODKEY,                       XK_Down,   incnmaster,     {.i = -1 } },
+	{ MODKEY,                       XK_s,      setmfact,       {.f = -0.05} },
+	{ MODKEY,                       XK_w,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Tab,    zoom,           {0} },
-	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_space,  setlayout,      {0} },
-	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
-	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
-	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
+	{ MODKEY,                       XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_grave,  focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -109,7 +105,8 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+	{ MODKEY|ShiftMask|ControlMask, XK_q,      quit,           {0} },
 };
 
 /* button definitions */
@@ -124,8 +121,6 @@ static const Button buttons[] = {
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
 	{ ClkTagBar,            0,              Button1,        view,           {0} },
-	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
-	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
 

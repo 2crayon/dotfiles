@@ -57,6 +57,7 @@ alias cht='cheatsheet'
 alias p='pacman'
 alias sp='sudo pacman'
 alias sd='systemctl'
+alias syg='sysgrep'
 
 alias ds='c ~/dotfiles'
 alias stow='stow -v'
@@ -122,8 +123,8 @@ pwdcb() {
     pwd | xclip -sel clip -r
 }
 
-homegrep() {
-    cd ~ && rg -g "!repos" -g "!managed" -g "!.cache" -g "!.config/Code - OSS" -g "!.config/google-chrome" -g "!.mozilla" -g "!.minecraft" -g "!.vscode-oss" -g "!.local/state" -g "!.wine" -g "!.lunarclient" -g "!.zsh_history" -g "!.bash_history" -g "!.local/share/fnm" $@ ~
+sysgrep() {
+    sudo rg -. --color always $@ /etc/ ~/dotfiles ~/.config | less
 }
 
 showpath() {
