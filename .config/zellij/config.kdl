@@ -183,6 +183,10 @@ keybinds {
     shared_except "tmux" "locked" {
         bind "Ctrl b" { SwitchToMode "Tmux"; }
     }
+
+    // command {
+    //     bind "s" { Run "zellij" "run" "-fc" "--" "sysaction"; }
+    // }
 }
 
 plugins {
