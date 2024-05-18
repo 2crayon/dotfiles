@@ -1,4 +1,4 @@
-Explicitly installed packages on: Fri May 17 10:47:59 PM IDT 2024
+Explicitly installed packages on: Fri May 17 11:52:07 PM IDT 2024
 alacritty
 amd-ucode
 atool
@@ -16,7 +16,6 @@ cmake
 code
 dash
 dashbinsh
-dex
 dnsmasq
 dragon-drop
 dunst

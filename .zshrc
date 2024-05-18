@@ -11,6 +11,8 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 
+WORDCHARS=''
+
 autoload -Uz compinit && compinit
 zstyle ':completion:*' rehash true
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -18,30 +20,15 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 _comp_options+=(globdots)
 
 bindkey -e
+bindkey "^P" history-beginning-search-backward
+bindkey "^N" history-beginning-search-forward
 
-bindkey "^X" _expand_alias
-bindkey "^[[1;3D" backward-word
-bindkey "^[[1;3C" forward-word
-bindkey "^[[P" delete-word
-bindkey "^[[P" delete-char
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
-bindkey "^[[C" forward-char
-bindkey "^[[D" backward-char
-bindkey "^[[H" beginning-of-line
-bindkey "^[[4~" end-of-line
-
-bindkey -s "^[2" "\C-a\C-kcd_into_project^M"
-bindkey -s "^[3" "\C-a\C-kfd_clipboard -rf^M"
-bindkey -s "^[4" "\C-a\C-kfd_clipboard -rd^M"
-bindkey -s "^[5" "\C-a\C-kfd_clipboard -r^M"
-bindkey -s "^[t" "\C-a\C-khistfzf^M"
-
-bindkey -s "^[q" "\C-a\C-kc ..^M"
-bindkey -s "^[e" "\C-a\C-kc -^M"
-bindkey -s "^[w" "\C-a\C-kc .^M"
-bindkey -s "^[r" "\C-a\C-kc^M"
-bindkey -s "^[x" "\C-a\C-kpwdcb^M"
+alias q='c ..'
+alias f='c .'
+alias s='c -'
+alias y='cd_into_project'
+alias j='histfzf'
+alias k='pwdcb'
 
 alias r='trash-put'
 alias tl='trash-list'
@@ -104,10 +91,11 @@ alias dragon-drop='frk dragon-drop -x -T'
 alias bat='bat -pn'
 alias nsxiv='frk nsxiv -a --anti-alias=no'
 
-alias gg='gitui'
+alias g='git'
 alias gc='git clone'
 alias gco='git checkout'
 alias gs='git status'
+alias gg='gitui'
 
 cdor() {
     clear -x && cd $@ >/dev/null ; ll
@@ -126,6 +114,7 @@ cd_into_project() {
 }
 
 histfzf() {
+    # If you quit the fuzzy find without picking, it empties your clipboard, but it doesn't matter
     history 1 -1 | sed -r "s/ *[0-9]*\*? *//" | awk "!x[\$0]++" | tac | fzf --scheme=history | xclip -sel clip -r
 }
 
