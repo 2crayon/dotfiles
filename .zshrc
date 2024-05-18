@@ -58,6 +58,7 @@ alias p='pacman'
 alias sp='sudo pacman'
 alias sd='systemctl'
 alias syg='sysgrep'
+alias re='reset'
 
 alias ds='c ~/dotfiles'
 alias stow='stow -v'

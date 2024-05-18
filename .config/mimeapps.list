@@ -8,7 +8,8 @@ x-scheme-handler/unknown=google-chrome.desktop
 
 image/png=nsxiv.desktop
 image/jpeg=nsxiv.desktop
-application/x-shellscript=code-oss.desktop
+text/plain=code-oss.desktop
 text/x-shellscript=code-oss.desktop
+application/x-shellscript=code-oss.desktop
 inode/directory=dir.desktop
 application/pdf=org.pwmt.zathura.desktop
