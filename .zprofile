@@ -2,14 +2,15 @@
 
 export PATH="$PATH:$HOME/scripts:$HOME/appimages:$HOME/.local/bin"
 export ARCHFLAGS="-arch x86_64"
+export COLORTERM="truecolor"
 
 export EDITOR="code"
 export VISUAL="code"
 export SUDO_EDITOR="vim"
 export TERMINAL="st"
 export BROWSER="google-chrome-stable"
-
 export PAGER="less"
+
 export LESS="-rMi"
 export CM_LAUNCHER="fzf"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
