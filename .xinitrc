@@ -8,6 +8,7 @@ xrdb -load ~/.Xresources &
 xwallpaper --zoom ~/assets/arch.png &
 slstatus &
 clipboard_notifications_daemon &
+redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | jq -r '"\(.location.lat):\(.location.lng)"') -t 4700:3600 &
 
 xrandr --output DP-4 --mode 1920x1080 --rate 144 --primary
 xrandr --output HDMI-0 --mode 1920x1080 --right-of DP-4

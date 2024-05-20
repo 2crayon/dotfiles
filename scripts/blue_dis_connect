@@ -5,5 +5,5 @@ name=`echo $choice | cut -d" " -f3-`
 
 [[ $addr ]] || exit 1
 
-[[ $1 ]] && (bluetoothctl disconnect "$addr" && notify-send "Bluetooth" "Disconnected from $name") \
-         || (bluetoothctl connect "$addr" && notify-send "Bluetooth" "Connected to $name")
+[[ $1 ]] && (bluetoothctl disconnect "$addr" && notify-send -t 4000 -r 21212 "Bluetooth" "Disconnected from $name") \
+         || (bluetoothctl connect "$addr" && notify-send -t 4000 -r 21212 "Bluetooth" "Connected to $name")

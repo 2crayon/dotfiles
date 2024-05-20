@@ -1,4 +1,4 @@
-Explicitly installed packages on: Mon May 20 02:20:30 PM IDT 2024
+Explicitly installed packages on: Mon May 20 03:42:37 PM IDT 2024
 adwaita-qt5-git
 adwaita-qt6-git
 alacritty
@@ -44,6 +44,8 @@ hwinfo
 imlib2
 inxi
 jdk-openjdk
+jo
+jq
 less
 libexif
 linux-firmware
@@ -77,8 +79,8 @@ qt5-base
 qt5ct
 qt6ct
 qtfm
+redshift
 rgb-tui-bin
-smartmontools
 stow
 trash-cli
 ttf-ancient-fonts
