@@ -1,4 +1,6 @@
-Explicitly installed packages on: Sat May 18 03:17:56 PM IDT 2024
+Explicitly installed packages on: Mon May 20 02:12:06 PM IDT 2024
+adwaita-qt5-git
+adwaita-qt6-git
 alacritty
 amd-ucode
 atool
@@ -28,6 +30,7 @@ fnm-bin
 fuse2
 fzf
 gdb
+gf2-git
 gimp
 git
 git-delta
@@ -71,6 +74,10 @@ playerctl
 polychromatic
 qemu-base
 qt5-base
+qt5ct
+qt6ct
+qtfm
+rgb-tui-bin
 smartmontools
 stow
 trash-cli
