@@ -11,8 +11,6 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 
-WORDCHARS=''
-
 autoload -Uz compinit && compinit
 zstyle ':completion:*' rehash true
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -51,7 +49,6 @@ alias a='atool'
 alias x='nsxiv'
 alias v='nsxiv -f'
 alias zb='zig build'
-alias ex='exit'
 alias sx='startx'
 alias cht='cheatsheet'
 alias p='pacman'
