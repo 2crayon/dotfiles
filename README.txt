@@ -1,4 +1,4 @@
-Explicitly installed packages on: Mon May 20 03:42:37 PM IDT 2024
+Explicitly installed packages on: Fri May 24 11:22:45 AM IDT 2024
 adwaita-qt5-git
 adwaita-qt6-git
 alacritty
@@ -43,11 +43,13 @@ gst-plugin-pipewire
 hwinfo
 imlib2
 inxi
+iptables-nft
 jdk-openjdk
 jo
 jq
 less
 libexif
+libvirt
 linux-firmware
 linux-lts
 linux-lts-headers
@@ -74,23 +76,25 @@ pipewire-jack
 pipewire-pulse
 playerctl
 polychromatic
-qemu-base
+qemu-full
 qt5-base
 qt5ct
 qt6ct
-qtfm
 redshift
 rgb-tui-bin
+rustup
 stow
 trash-cli
 ttf-ancient-fonts
 ttf-cascadia-mono-nerd
 udiskie
 ueberzugpp
+usbutils
 vi
 vim
 virt-manager
 virt-viewer
+virtualbox
 vlc
 wget
 wine
