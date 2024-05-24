@@ -62,6 +62,7 @@ alias re='reset'
 alias o='xdg-open'
 alias cm='configure_mouse'
 
+alias fbsl='find . -xtype l'
 alias ds='c ~/dotfiles'
 alias stow='stow -v'
 alias rme='cat <(echo "Explicitly installed packages on: $(date)") <(p -Qe | cut -d" " -f1) > ~/dotfiles/README.txt'
