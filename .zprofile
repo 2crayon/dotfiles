@@ -3,6 +3,7 @@
 export PATH="$PATH:$HOME/scripts:$HOME/appimages:$HOME/.local/bin"
 export ARCHFLAGS="-arch x86_64"
 export COLORTERM="truecolor"
+export QT_QPA_PLATFORMTHEME="qt5ct"
 
 export EDITOR="code"
 export VISUAL="code"
