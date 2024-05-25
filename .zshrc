@@ -23,6 +23,8 @@ bindkey -e
 bindkey "^P" history-beginning-search-backward
 bindkey "^N" history-beginning-search-forward
 
+source ~/.aliases
+
 cdor() {
     clear -x && cd $@ >/dev/null ; ll
 }
@@ -63,8 +65,6 @@ lalpager() {
 cheatsheet() {
     curl cht.sh/"$1"
 }
-
-source ~/.aliases
 
 eval "$(zellij setup --generate-auto-start zsh)"
 eval "$(fnm env --use-on-cd)"

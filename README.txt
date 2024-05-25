@@ -1,4 +1,4 @@
-Explicitly installed packages on: Fri May 24 11:22:45 AM IDT 2024
+Explicitly installed packages on: Sat May 25 01:14:00 PM IDT 2024
 adwaita-qt5-git
 adwaita-qt6-git
 alacritty
@@ -23,9 +23,11 @@ dragon-drop
 dunst
 dust
 efibootmgr
+emacs
 eza
 fd
 firefox
+fish
 fnm-bin
 fuse2
 fzf
