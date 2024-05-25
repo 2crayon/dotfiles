@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH="$PATH:$HOME/scripts:$HOME/appimages:$HOME/.local/bin"
+export PATH="$PATH:$HOME/scripts:$HOME/appimages:$HOME/.local/bin:$HOME/.config/emacs/bin"
 export ARCHFLAGS="-arch x86_64"
 export COLORTERM="truecolor"
 export QT_QPA_PLATFORMTHEME="qt5ct"
