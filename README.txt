@@ -1,8 +1,9 @@
-Explicitly installed packages on: Sat May 25 01:14:00 PM IDT 2024
+Explicitly installed packages on: Sun May 26 11:59:43 AM IDT 2024
 adwaita-qt5-git
 adwaita-qt6-git
 alacritty
 amd-ucode
+apache
 atool
 base
 base-devel
@@ -16,6 +17,7 @@ btop
 clipmenu
 cmake
 code
+code-marketplace
 dash
 dashbinsh
 dnsmasq
@@ -44,6 +46,7 @@ grub
 gst-plugin-pipewire
 hwinfo
 imlib2
+inetutils
 inxi
 iptables-nft
 jdk-openjdk
@@ -58,6 +61,8 @@ linux-lts-headers
 lxsession
 maim
 man-db
+mariadb-lts
+mariadb-lts-clients
 nano
 neofetch
 networkmanager
@@ -71,6 +76,8 @@ openrazer-daemon
 openssh
 pamixer
 pavucontrol
+php
+phpmyadmin
 picom
 pipewire
 pipewire-alsa
@@ -81,6 +88,7 @@ polychromatic
 qemu-full
 qt5-base
 qt5ct
+qt6-base
 qt6ct
 redshift
 rgb-tui-bin
