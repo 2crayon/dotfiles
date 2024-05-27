@@ -1781,6 +1781,7 @@ xbell(void)
 		xseturgency(1);
 	if (bellvolume)
 		XkbBell(xw.dpy, xw.win, bellvolume, (Atom)NULL);
+	system(bellnotifycmd);
 }
 
 void

@@ -84,6 +84,7 @@ const int boxdraw_braille = 1;
  * it
  */
 static int bellvolume = 0;
+char *bellnotifycmd = "notify-send \" st\" -u low -r 22151 -t 500";
 
 /* default TERM value */
 char *termname = "st-256color";
