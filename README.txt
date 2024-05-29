@@ -1,4 +1,4 @@
-Explicitly installed packages on: Sun May 26 11:59:43 AM IDT 2024
+Explicitly installed packages on: Wed May 29 10:51:52 AM IDT 2024
 adwaita-qt5-git
 adwaita-qt6-git
 alacritty
@@ -12,14 +12,17 @@ bc
 blueberry
 bluez
 bluez-utils
+bombadillo
 boomer-git
 btop
+clang
 clipmenu
 cmake
 code
 code-marketplace
 dash
 dashbinsh
+discord
 dnsmasq
 dragon-drop
 dunst
@@ -41,6 +44,7 @@ git-delta
 gitui
 gnome-themes-extra
 gnu-netcat
+gobang-bin
 google-chrome
 grub
 gst-plugin-pipewire
@@ -52,6 +56,9 @@ iptables-nft
 jdk-openjdk
 jo
 jq
+kitty
+lazygit
+lazysql
 less
 libexif
 libvirt
@@ -77,7 +84,6 @@ openssh
 pamixer
 pavucontrol
 php
-phpmyadmin
 picom
 pipewire
 pipewire-alsa
@@ -94,6 +100,8 @@ redshift
 rgb-tui-bin
 rustup
 stow
+tmux
+todoist-appimage
 trash-cli
 ttf-ancient-fonts
 ttf-cascadia-mono-nerd
