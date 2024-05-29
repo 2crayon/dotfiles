@@ -28,11 +28,12 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating    issticky    monitor */
-	{ "Gimp",     NULL,       NULL,       1 << 4,            0,      0,     -1 },
+	{ "Dragon-drop",  NULL,       NULL,       0,       1,     1,      -1 },
+	{ "code-oss",     NULL,       NULL,       1 << 1,            0,     0,      -1 },
 	{ "Google-chrome",     NULL,       NULL,       1 << 3,      0,      0,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 3,       0,     0,      -1 },
-	{ "code-oss",     NULL,       NULL,       1 << 1,            0,     0,      -1 },
-	{ "Dragon-drop",  NULL,       NULL,       0,       1,     1,      -1 },
+	{ "Todoist",     NULL,       NULL,       1 << 4,      0,      0,           -1 },
+	{ "discord",     NULL,       NULL,       1 << 5,      0,      0,           -1 },
 };
 
 /* layout(s) */
