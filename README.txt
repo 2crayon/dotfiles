@@ -1,4 +1,4 @@
-Explicitly installed packages on: Wed May 29 10:51:52 AM IDT 2024
+Explicitly installed packages on: Thu May 30 12:05:36 PM IDT 2024
 adwaita-qt5-git
 adwaita-qt6-git
 alacritty
@@ -22,7 +22,6 @@ code
 code-marketplace
 dash
 dashbinsh
-discord
 dnsmasq
 dragon-drop
 dunst
@@ -100,6 +99,7 @@ redshift
 rgb-tui-bin
 rustup
 stow
+syncthing
 tmux
 todoist-appimage
 trash-cli

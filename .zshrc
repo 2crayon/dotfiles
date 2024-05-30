@@ -50,10 +50,6 @@ pwdcb() {
     pwd | xclip -sel clip -r
 }
 
-sysgrep() {
-    sudo rg -. --color always $@ /etc/ ~/dotfiles ~/.config | less
-}
-
 showpath() {
     echo "$PATH" | sed 's/:/\n/g'
 }
