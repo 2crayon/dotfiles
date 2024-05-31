@@ -10,8 +10,7 @@ slstatus &
 clipboard_notifications_daemon &
 redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | jq -r '"\(.location.lat):\(.location.lng)"') -t 4700:3600 &
 emacs --daemon &
-# Generate an OS cache for later executions of fd
-fd --hidden . / >/dev/null &
+fd --hidden . / >/dev/null & # https://askubuntu.com/questions/1027186/improve-initial-use-of-find-performance-time
 
 configure_mouse 8
 configure_monitors
