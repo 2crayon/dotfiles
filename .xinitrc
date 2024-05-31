@@ -10,6 +10,8 @@ slstatus &
 clipboard_notifications_daemon &
 redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | jq -r '"\(.location.lat):\(.location.lng)"') -t 4700:3600 &
 emacs --daemon &
+# Generate an OS cache for later executions of fd
+fd --hidden . / >/dev/null &
 
 configure_mouse 8
 configure_monitors
