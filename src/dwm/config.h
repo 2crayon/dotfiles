@@ -29,6 +29,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating    issticky    monitor */
 	{ "Dragon-drop",  NULL,       NULL,       0,       1,     1,      -1 },
+	{ "TermPop",  NULL,       NULL,       0,       1,     1,      -1 },
 	{ "code-oss",     NULL,       NULL,       1 << 1,            0,     0,      -1 },
 	{ "Google-chrome",     NULL,       NULL,       1 << 3,      0,      0,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 3,       0,     0,      -1 },
@@ -66,6 +67,7 @@ static const char *langcmd[]  = { "xkb-switch", "-n", NULL };
 static const char *zoomercmd[]  = { "boomer", NULL };
 static const char *screenshotcmd[]  = { "scrotter", NULL };
 static const char *colorpickercmd[]  = { "xcolor", "-s", "clipboard", NULL };
+static const char *fdcbcmd[]  = { "termpop", "180x40", "fd_clipboard", "/", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -76,6 +78,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_F1,     spawn,          {.v = zoomercmd } },
 	{ MODKEY,                       XK_F2,     spawn,          {.v = screenshotcmd } },
 	{ MODKEY,                       XK_F3,     spawn,          {.v = colorpickercmd } },
+	{ MODKEY,                       XK_t,      spawn,          {.v = fdcbcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          SHCMD("playerctl play-pause && notify-send -t 4000 -r 25001 \"`playerctl metadata --format '({{duration(position)}}) {{artist}}'`\" \"`playerctl metadata --format '{{title}}'`\"") },
 	{ MODKEY|ShiftMask|ControlMask, XK_Right,  spawn,          SHCMD("playerctl next && sleep 0.3 && notify-send -t 4000 -r 25001 \"`playerctl metadata --format 'Now Playing: {{artist}}'`\" \"`playerctl metadata --format '{{title}}'`\"") },
 	{ MODKEY|ShiftMask|ControlMask, XK_Left,   spawn,          SHCMD("playerctl previous && sleep 0.3 && notify-send -t 4000 -r 25001 \"`playerctl metadata --format 'Now Playing: {{artist}}'`\" \"`playerctl metadata --format '{{title}}'`\"") },

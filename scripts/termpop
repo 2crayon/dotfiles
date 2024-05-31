@@ -1,14 +1,5 @@
 #!/usr/bin/env bash
 size=$1
 shift
-sizeargs=""
-title=$1
-shift
 
-case $size in
-    "big") sizeargs='-o window.dimensions.columns=180 -o window.dimensions.lines=50' ;;
-    "medium") sizeargs='-o window.dimensions.columns=140 -o window.dimensions.lines=42' ;;
-    "small") sizeargs='-o window.dimensions.columns=100 -o window.dimensions.lines=35' ;;
-esac
-
-alacritty --class TermPop -T "$title" -o $sizeargs -e $@
+st -c TermPop -g "$size" -e $@

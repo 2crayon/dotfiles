@@ -1,26 +1,8 @@
 #!/usr/bin/env bash
-fdargs=""
-searchpath="/"
+searchpath=$1
 
-while getopts "dfr" opt; do
-    case $opt in
-        d)
-            fdargs="-t d"
-            ;;
-        f)
-            fdargs="-t f"
-            ;;
-        r)
-            searchpath="."
-            ;;
-        \?)
-            exit 1
-            ;;
-    esac
-done
-
-chosen=$(fd . --base-directory="$searchpath" --strip-cwd-prefix --hidden --color  never $fdargs | fzf  --scheme=path)
+chosen=$(fd . $searchpath --hidden | fzf  --scheme=path)
 # fzf 130 exit code: Interrupted with CTRL-C or ESC
 [[ $? == 130 ]] && exit 1
 
-echo `cd $searchpath && realpath "$chosen"` | nohup >/dev/null 2>/dev/null xclip -sel clip -rmlastnl
+echo "$chosen" | nohup >/dev/null 2>/dev/null xclip -sel clip -rmlastnl
