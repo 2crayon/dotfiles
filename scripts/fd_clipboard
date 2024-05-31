@@ -20,7 +20,7 @@ while getopts "dfr" opt; do
 done
 
 chosen=$(fd . --base-directory="$searchpath" --strip-cwd-prefix --hidden --color  never $fdargs | fzf  --scheme=path)
-# `man fzf`: 130 Interrupted with CTRL-C or ESC
+# fzf 130 exit code: Interrupted with CTRL-C or ESC
 [[ $? == 130 ]] && exit 1
 
 echo `cd $searchpath && realpath "$chosen"` | xclip -sel clip -rmlastnl

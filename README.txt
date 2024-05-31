@@ -1,4 +1,4 @@
-Explicitly installed packages on: Thu May 30 12:05:36 PM IDT 2024
+Explicitly installed packages on: Fri May 31 06:18:39 PM IDT 2024
 adwaita-qt5-git
 adwaita-qt6-git
 alacritty
@@ -55,6 +55,7 @@ iptables-nft
 jdk-openjdk
 jo
 jq
+kdeconnect
 kitty
 lazygit
 lazysql
@@ -64,6 +65,7 @@ libvirt
 linux-firmware
 linux-lts
 linux-lts-headers
+localsend-bin
 lxsession
 maim
 man-db
@@ -98,6 +100,7 @@ qt6ct
 redshift
 rgb-tui-bin
 rustup
+scrcpy
 stow
 syncthing
 tmux
