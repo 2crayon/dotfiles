@@ -13,7 +13,6 @@ export BROWSER="google-chrome-stable"
 export PAGER="less"
 
 export LESS="-rMi"
-export CM_LAUNCHER="fzf"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 export STOW_DIR="$HOME/dotfiles"

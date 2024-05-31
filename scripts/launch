@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-selected_app=$(pathed | fzf)
-
-[ -z "$selected_app" ] && exit 1
-frk "$selected_app"
