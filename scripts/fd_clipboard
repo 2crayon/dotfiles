@@ -23,4 +23,4 @@ chosen=$(fd . --base-directory="$searchpath" --strip-cwd-prefix --hidden --color
 # fzf 130 exit code: Interrupted with CTRL-C or ESC
 [[ $? == 130 ]] && exit 1
 
-echo `cd $searchpath && realpath "$chosen"` | xclip -sel clip -rmlastnl
+echo `cd $searchpath && realpath "$chosen"` | nohup >/dev/null 2>/dev/null xclip -sel clip -rmlastnl
