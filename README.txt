@@ -1,4 +1,4 @@
-Explicitly installed packages on: Fri May 31 06:18:39 PM IDT 2024
+Explicitly installed packages on: Sat Jun  1 02:34:33 PM IDT 2024
 adwaita-qt5-git
 adwaita-qt6-git
 alacritty
@@ -117,6 +117,7 @@ virt-manager
 virt-viewer
 virtualbox
 vlc
+wezterm
 wget
 wine
 wine-mono

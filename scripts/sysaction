@@ -6,7 +6,7 @@ actions["sleep"]="systemctl suspend"
 actions["shutdown"]="shutdown -h now"
 actions["reboot"]="reboot"
 
-selected=$(printf "%s\n" ${(k)actions} | fzf)
+selected=$(printf "%s\n" ${(k)actions} | dmenu -l 10)
 
 [[ $selected ]] || exit 1
 

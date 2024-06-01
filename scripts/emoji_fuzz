@@ -2,4 +2,4 @@
 chosen=$(cut -d ';' -f1 ~/assets/emoji | fzf | sed "s/ .*//")
 [ -z "$chosen" ] && exit 1
 
-echo "$chosen" | xclip -sel clip -r
+echo "$chosen" | nohup >/dev/null 2>/dev/null xclip -sel clip -r

@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
-choice="$(bluetoothctl devices | fzf)"
+choice="$(bluetoothctl devices | dmenu -i -l 10)"
 addr=`echo $choice | cut -d" " -f2`
 name=`echo $choice | cut -d" " -f3-`
 
 [[ $addr ]] || exit 1
 
-[[ $1 ]] && (bluetoothctl disconnect "$addr" && notify-send -t 4000 -r 21212 "Bluetooth" "Disconnected from $name") \
-         || (bluetoothctl connect "$addr" && notify-send -t 4000 -r 21212 "Bluetooth" "Connected to $name")
+if [[ $(printf "Connect\nDisconnect" | dmenu -i -l 10) == "Connect" ]]; then
+    bluetoothctl connect "$addr" && notify-send -t 4000 -r 21212 "Bluetooth" "Connected to $name" || notify-send -t 4000 -r 21212 "Bluetooth" "Failed to connect to $name"
+else
+    bluetoothctl disconnect "$addr" && notify-send -t 4000 -r 21212 "Bluetooth" "Disconnected from $name" || notify-send -t 4000 -r 21212 "Bluetooth" "Failed to disconnect from $name"
+fi
