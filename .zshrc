@@ -55,7 +55,7 @@ showpath() {
 }
 
 lalpager() {
-    lal --color always --icons always --hyperlink $@ | less -F
+    lal --color always --hyperlink $@ | less -F
 }
 
 cheatsheet() {
