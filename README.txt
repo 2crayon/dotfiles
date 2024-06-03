@@ -1,4 +1,4 @@
-Explicitly installed packages on: Mon Jun  3 11:27:39 AM IDT 2024
+Explicitly installed packages on: Mon Jun  3 11:37:29 AM IDT 2024
 adwaita-qt5-git
 adwaita-qt6-git
 alacritty
@@ -66,6 +66,7 @@ linux-firmware
 linux-lts
 linux-lts-headers
 localsend-bin
+lunar-client
 lxsession
 maim
 man-db

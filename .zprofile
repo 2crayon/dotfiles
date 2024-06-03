@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH="$PATH:$HOME/scripts:$HOME/appimages:$HOME/.local/bin:$HOME/.config/emacs/bin"
+export PATH="$PATH:$HOME/scripts:$HOME/.local/bin:$HOME/.config/emacs/bin"
 
 export EDITOR="code"
 export VISUAL="code"
