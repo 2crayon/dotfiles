@@ -1,9 +1,6 @@
 #!/bin/sh
 
 export PATH="$PATH:$HOME/scripts:$HOME/appimages:$HOME/.local/bin:$HOME/.config/emacs/bin"
-export ARCHFLAGS="-arch x86_64"
-export COLORTERM="truecolor"
-export QT_QPA_PLATFORMTHEME="qt5ct"
 
 export EDITOR="code"
 export VISUAL="code"
@@ -12,10 +9,14 @@ export TERMINAL="st"
 export BROWSER="google-chrome-stable"
 export PAGER="less"
 
+# export ARCHFLAGS="-arch x86_64"
 export LESS="-rMi"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 export STOW_DIR="$HOME/dotfiles"
+export GTK_THEME="Adwaita-dark"
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export COLORTERM="truecolor"
 
 # These env exports are not necessary, as applications
 # should fallback to these values anyways as per the

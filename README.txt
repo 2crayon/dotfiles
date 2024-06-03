@@ -1,4 +1,4 @@
-Explicitly installed packages on: Sat Jun  1 02:34:33 PM IDT 2024
+Explicitly installed packages on: Mon Jun  3 11:27:39 AM IDT 2024
 adwaita-qt5-git
 adwaita-qt6-git
 alacritty
@@ -98,7 +98,6 @@ qt5ct
 qt6-base
 qt6ct
 redshift
-rgb-tui-bin
 rustup
 scrcpy
 stow

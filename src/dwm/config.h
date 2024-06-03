@@ -72,6 +72,7 @@ static const char *emojicmd[]  = { "termpop", "180x40", "emoji_fuzz", NULL };
 static const char *sysactioncmd[]  = { "sysaction", NULL };
 static const char *clipmenucmd[]  = { "clipmenu", "-i", NULL };
 static const char *bluecmd[]  = { "blue_dis_connect", NULL };
+static const char *colorcmd[]  = { "clrr", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -87,6 +88,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Delete, spawn,          {.v = sysactioncmd } },
 	{ MODKEY,                       XK_v,      spawn,          {.v = fdcbcmd } },
 	{ MODKEY,                       XK_c,      spawn,          {.v = clipmenucmd } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = colorcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          SHCMD("playerctl play-pause && notify-send -t 4000 -r 25001 \"`playerctl metadata --format '({{duration(position)}}) {{artist}}'`\" \"`playerctl metadata --format '{{title}}'`\"") },
 	{ MODKEY|ShiftMask|ControlMask, XK_Right,  spawn,          SHCMD("playerctl next && sleep 0.3 && notify-send -t 4000 -r 25001 \"`playerctl metadata --format 'Now Playing: {{artist}}'`\" \"`playerctl metadata --format '{{title}}'`\"") },
 	{ MODKEY|ShiftMask|ControlMask, XK_Left,   spawn,          SHCMD("playerctl previous && sleep 0.3 && notify-send -t 4000 -r 25001 \"`playerctl metadata --format 'Now Playing: {{artist}}'`\" \"`playerctl metadata --format '{{title}}'`\"") },
@@ -99,7 +101,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_a,      focusstack,     {.i = -1 } },
 	// { MODKEY,                       XK_Up,     incnmaster,     {.i = +1 } },
 	// { MODKEY,                       XK_Down,   incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_s,      setmfact,       {.f = -0.05} },
+	{ MODKEY|ShiftMask,             XK_w,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_w,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Tab,    zoom,           {0} },
 	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[0]} },
