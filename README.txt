@@ -1,9 +1,8 @@
-Explicitly installed packages on: Mon Jun  3 11:37:29 AM IDT 2024
+Explicitly installed packages on: Tue Jun  4 10:25:52 AM IDT 2024
 adwaita-qt5-git
 adwaita-qt6-git
 alacritty
 amd-ucode
-apache
 atool
 base
 base-devel
@@ -22,6 +21,7 @@ code
 code-marketplace
 dash
 dashbinsh
+debuginfod
 dnsmasq
 dragon-drop
 dunst
@@ -81,8 +81,11 @@ noto-fonts-emoji
 noto-fonts-extra
 nvidia-lts
 nvidia-utils
+obsidian
+ollama
 openrazer-daemon
 openssh
+oterm
 pamixer
 pavucontrol
 php

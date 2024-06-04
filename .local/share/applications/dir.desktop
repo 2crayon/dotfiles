@@ -1,4 +1,4 @@
 [Desktop Entry]
 Type=Application
 Name=File Manager
-Exec=/usr/bin/env alacritty --working-directory %U
+Exec=/usr/bin/env st -d %U
