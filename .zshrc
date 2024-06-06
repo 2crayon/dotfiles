@@ -23,10 +23,24 @@ bindkey -e
 bindkey "^P" history-beginning-search-backward
 bindkey "^N" history-beginning-search-forward
 
+#-- Make the last command stay in the prompt when it's an error
+autoload -U add-zsh-hook
+add-zsh-hook preexec handle_preexec
+handle_preexec() {
+    _last_command="$1"
+}
+handle_postexec() {
+    if [[ $? != 0 ]]; then
+        print -z "$_last_command"
+    fi
+}
+add-zsh-hook precmd handle_postexec
+#--
+
 source ~/.aliases
 
 cdor() {
-    clear -x && cd $@ >/dev/null ; ll
+    clear -x && cd $@ >/dev/null ; la
 }
 
 helpor() {
@@ -39,6 +53,14 @@ cd_into_project() {
     [[ $selected ]] || return
     c "$(cd $HOME && realpath $selected)"
     unset selected
+}
+
+go_to_project_root() {
+    project_root="$(projectroot)"
+    if [[ $? == 0 ]]; then
+        c "$project_root"
+    fi
+    unset project_root
 }
 
 histfzf() {
@@ -55,7 +77,7 @@ showpath() {
 }
 
 lalpager() {
-    lal --color always --hyperlink $@ | less -F
+    lal --color always $@ | less -F
 }
 
 cheatsheet() {
@@ -67,4 +89,4 @@ eval "$(fnm env --use-on-cd)"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 
-ll
+la
