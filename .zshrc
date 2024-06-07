@@ -40,7 +40,12 @@ add-zsh-hook precmd handle_postexec
 source ~/.aliases
 
 cdor() {
-    clear -x && cd $@ >/dev/null ; la
+    clear -x && cd $@ >/dev/null
+    if [[ $? != 0 ]]; then
+        la && return 1
+    else
+        la
+    fi
 }
 
 helpor() {
