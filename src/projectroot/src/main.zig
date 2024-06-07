@@ -4,9 +4,6 @@ pub fn main() !void {
     var arena_impl = std.heap.ArenaAllocator.init(std.heap.page_allocator);
     const arena = arena_impl.allocator();
 
-    const args = try std.process.argsAlloc(arena);
-    _ = args; // autofix
-
     const cwd = try std.fs.cwd().realpathAlloc(arena, ".");
 
     var it = std.mem.tokenizeScalar(u8, cwd, '/');
