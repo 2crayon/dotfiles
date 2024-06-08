@@ -1,4 +1,4 @@
-Explicitly installed packages on: Sat Jun  8 06:54:23 PM IDT 2024
+Explicitly installed packages on: Sat Jun  8 11:01:53 PM IDT 2024
 adwaita-qt5-git
 adwaita-qt6-git
 alacritty
@@ -8,6 +8,7 @@ base
 base-devel
 bat
 bc
+bind
 blueberry
 bluez
 bluez-utils
@@ -23,6 +24,7 @@ dash
 dashbinsh
 debuginfod
 dnsmasq
+dog
 dragon-drop
 dunst
 dust
@@ -95,6 +97,7 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+pkgfile
 playerctl
 polychromatic
 qemu-full
@@ -123,6 +126,7 @@ virt-manager
 virt-viewer
 virtualbox
 vlc
+watchexec
 wezterm
 wget
 wine
@@ -132,6 +136,7 @@ xclip
 xcolor
 xdg-utils
 xdo
+xh
 xkb-switch
 xorg-docs
 xorg-font-util
