@@ -1,4 +1,4 @@
-Explicitly installed packages on: Wed Jun  5 12:15:09 PM IDT 2024
+Explicitly installed packages on: Sat Jun  8 06:54:23 PM IDT 2024
 adwaita-qt5-git
 adwaita-qt6-git
 alacritty
@@ -74,6 +74,7 @@ mariadb-lts
 mariadb-lts-clients
 nano
 neofetch
+neovim
 networkmanager
 noto-fonts
 noto-fonts-cjk
@@ -104,6 +105,7 @@ qt6ct
 redshift
 rustup
 scrcpy
+sd
 stow
 syncthing
 tmux
@@ -113,6 +115,7 @@ ttf-ancient-fonts
 ttf-cascadia-mono-nerd
 udiskie
 ueberzugpp
+unzip
 usbutils
 vi
 vim
@@ -135,7 +138,6 @@ xorg-font-util
 xorg-fonts-100dpi
 xorg-fonts-75dpi
 xorg-server
-xorg-xbacklight
 xorg-xev
 xorg-xgamma
 xorg-xinit
