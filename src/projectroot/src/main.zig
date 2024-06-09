@@ -10,14 +10,17 @@ pub fn main() !void {
 
     var new_path = std.ArrayList(u8).init(arena);
 
-    var i: usize = 0;
-    while (it.next()) |p| : (i += 1) {
+    var reached_project: bool = false;
+    while (it.next()) |p| {
         try new_path.append('/');
         try new_path.appendSlice(p);
 
-        if (i == 3) {
+        if (reached_project) {
             try std.io.getStdOut().writer().print("{s}", .{new_path.items});
             std.process.exit(0);
+        }
+        if (std.mem.eql(u8, p, "src") or std.mem.eql(u8, p, "repos")) {
+            reached_project = true;
         }
     }
 
