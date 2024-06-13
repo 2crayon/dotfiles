@@ -1,4 +1,4 @@
-Explicitly installed packages on: Sat Jun  8 11:01:53 PM IDT 2024
+Explicitly installed packages on: Thu Jun 13 10:25:39 AM IDT 2024
 adwaita-qt5-git
 adwaita-qt6-git
 alacritty
@@ -14,6 +14,7 @@ bluez
 bluez-utils
 bombadillo
 boomer-git
+borg
 btop
 clang
 clipmenu
@@ -74,6 +75,7 @@ maim
 man-db
 mariadb-lts
 mariadb-lts-clients
+miniserve
 nano
 neofetch
 neovim
@@ -109,6 +111,7 @@ redshift
 rustup
 scrcpy
 sd
+shell-color-scripts-git
 stow
 syncthing
 tmux
@@ -156,7 +159,6 @@ yay-debug
 yt-dlp
 zathura
 zathura-pdf-mupdf
-zellij
 zigup-bin
 zram-generator
 zsh

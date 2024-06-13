@@ -20,7 +20,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "T", "G" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -29,7 +29,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating    issticky    monitor */
 	{ "Dragon-drop",  NULL,       NULL,       0,       1,     1,      -1 },
-	{ "TermPop",  NULL,       NULL,       0,       1,     1,      -1 },
+	{ "Gfzf",  NULL,       NULL,       0,       1,     1,      -1 },
 	{ "code-oss",     NULL,       NULL,       1 << 1,            0,     0,      -1 },
 	{ "Emacs",     NULL,       NULL,       1 << 1,            0,     0,      -1 },
 	{ "obsidian",     NULL,       NULL,       1 << 2,      0,      0,           -1 },
@@ -69,8 +69,8 @@ static const char *langcmd[]  = { "xkb-switch", "-n", NULL };
 static const char *zoomercmd[]  = { "boomer", NULL };
 static const char *screenshotcmd[]  = { "scrotter", NULL };
 static const char *colorpickercmd[]  = { "xcolor", "-s", "clipboard", NULL };
-static const char *fdcbcmd[]  = { "termpop", "180x40", "fd_clipboard", "/", NULL };
-static const char *emojicmd[]  = { "termpop", "180x40", "emoji_fuzz", NULL };
+static const char *fdcbcmd[]  = { "fd_clipboard", "/", NULL };
+static const char *emojicmd[]  = { "rofimoji", NULL };
 static const char *sysactioncmd[]  = { "sysaction", NULL };
 static const char *clipmenucmd[]  = { "clipmenu", "-i", NULL };
 static const char *bluecmd[]  = { "blue_dis_connect", NULL };
@@ -85,7 +85,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_e,      spawn,          {.v = zoomercmd } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = screenshotcmd } },
 	{ MODKEY|ShiftMask,             XK_r,      spawn,          {.v = emojicmd } },
-	{ MODKEY,                       XK_o,      spawn,          {.v = colorpickercmd } },
+	{ MODKEY,                       XK_q,      spawn,          {.v = colorpickercmd } },
 	{ MODKEY,                       XK_l,      spawn,          {.v = bluecmd } },
 	{ MODKEY,                       XK_Delete, spawn,          {.v = sysactioncmd } },
 	{ MODKEY,                       XK_v,      spawn,          {.v = fdcbcmd } },
@@ -118,8 +118,8 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_5,                      4)
 	TAGKEYS(                        XK_6,                      5)
 	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
+	TAGKEYS(                        XK_t,                      7)
+	TAGKEYS(                        XK_g,                      8)
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY|ShiftMask|ControlMask, XK_q,      quit,           {0} },
 };

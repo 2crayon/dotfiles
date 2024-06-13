@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 searchpath=$1
 
-chosen=$(fd . $searchpath --hidden | fzf  --scheme=path)
+chosen=$(fd . $searchpath --hidden | fzf --scheme=path)
 # fzf 130 exit code: Interrupted with CTRL-C or ESC
 [[ $? == 130 ]] && exit 1
 
