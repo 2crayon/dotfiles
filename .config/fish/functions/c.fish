@@ -1,5 +1,5 @@
 function c
-    clear -x; and cd $argv >/dev/null
+    clearx; and cd $argv >/dev/null
     if test $status != 0
         ls --all; and return 1
     else
