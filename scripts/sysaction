@@ -1,13 +1,15 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 declare -A actions
+actions=( 
+    ["test"]="notify-send \"TEST SYSACTION\""
+    ["kill xinit"]="killall xinit"
+    ["sleep"]="systemctl suspend"
+    ["shutdown"]="shutdown -h now"
+    ["reboot"]="reboot"
+)
 
-actions["kill xinit"]="killall xinit"
-actions["sleep"]="systemctl suspend"
-actions["shutdown"]="shutdown -h now"
-actions["reboot"]="reboot"
-
-selected=$(printf "%s\n" ${(k)actions} | dmenu -l 10)
+selected=$(printf "%s\n" "${!actions[@]}" | dmenu -l 5)
 
 [[ $selected ]] || exit 1
 
-eval $actions[$selected]
+eval "${actions[$selected]}"

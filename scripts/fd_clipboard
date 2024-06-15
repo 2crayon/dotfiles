@@ -1,8 +1,15 @@
 #!/usr/bin/env bash
 searchpath=$1
+g=$2
 
-chosen=$(fd . $searchpath --hidden | fzf --scheme=path)
-# fzf 130 exit code: Interrupted with CTRL-C or ESC
-[[ $? == 130 ]] && exit 1
+fuzzer=""
+if [[ $g == "-" ]]; then
+    fuzzer="fzf"
+else
+    fuzzer="gfzf"
+fi
 
-echo "$chosen" | nohup >/dev/null 2>/dev/null xclip -sel clip -rmlastnl
+chosen=$(fd . $searchpath --hidden | $fuzzer --scheme=path)
+[[ $? != 0 ]] && exit 1
+
+echo "$chosen" | xsel -ib

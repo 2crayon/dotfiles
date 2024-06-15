@@ -1,9 +1,2 @@
-#!/usr/bin/env bash
-# if [ -t 0 ]; then
-#     exec fzf $@
-# else
-    fifoname=$(mktemp --dry-run -t prog_XXXXXX).fifo-$RANDOM-$$
-    mkfifo -m 0600 "$fifoname"
-    wezterm bash -c "fzf $@ < $fifoname" > $fifoname
-    # wezterm --config-file ~/.wezterm.fzf.lua start --class Gfzf bash -c "fzf --color=bw --border $@ < $fifoname" > $fifoname
-# fi
+#!/usr/bin/env dash
+exec st -f "monospace:pixelsize=18:antialias=true:autohint=true" -c Gfzf -g 130x40 sh -c "exec fzf --color=16 --border \"\$@\" < /proc/$$/fd/0 > /proc/$$/fd/1" -- "$@"

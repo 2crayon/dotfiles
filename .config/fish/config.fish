@@ -10,6 +10,7 @@ set -x SUDO_EDITOR code
 set -x TERMINAL wezterm
 set -x BROWSER google-chrome-stable
 set -x PAGER less
+set -x FZF_DEFAULT_OPTS ""
 
 # set -x ARCHFLAGS "-arch x86_64"
 set -x LESS -rMi
