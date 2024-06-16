@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # based on a script from http://invisible-island.net/xterm/xterm.faq.html
 # https://stackoverflow.com/a/2575525/1383356
 exec < /dev/tty

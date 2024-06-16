@@ -1,0 +1,24 @@
+{
+  "security.workspace.trust.untrustedFiles": "open",
+  "zig.path": "zig",
+  "zig.zls.path": "/home/ely/.config/Code - OSS/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
+  "zig.initialSetupDone": true,
+  "security.promptForLocalFileProtocolHandling": false,
+  "zig.zls.enableAutofix": true,
+  "explorer.confirmDelete": false,
+  "git.openRepositoryInParentFolders": "never",
+  "extensions.ignoreRecommendations": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "vscode-color-picker.languages": [
+    "python",
+    "javascript",
+    "typescript",
+    "lua"
+  ],
+  "window.density.editorTabHeight": "compact",
+  "window.titleBarStyle": "custom",
+  "window.customMenuBarAltFocus": false,
+}

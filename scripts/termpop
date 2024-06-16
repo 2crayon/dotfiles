@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-size=$1
-shift
-
-st -c TermPop -g "$size" -e $@

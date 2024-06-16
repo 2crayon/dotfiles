@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-chosen=$(cut -d ';' -f1 ~/assets/emoji | fzf | sed "s/ .*//")
+chosen=$(cut -d ';' -f1 ~/assets/emoji | gfzf | sed "s/ .*//")
 [ -z "$chosen" ] && exit 1
 
 echo "$chosen" | nohup >/dev/null 2>/dev/null xclip -sel clip -r

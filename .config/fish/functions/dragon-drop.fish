@@ -1,4 +1,3 @@
-function dragon-drop --wraps='frk dragon-drop --and-exit --on-top' --description 'alias dragon-drop=frk dragon-drop --and-exit --on-top'
-  frk dragon-drop --and-exit --on-top $argv
-        
+function dragon-drop --wraps='dragon-drop --and-exit --on-top' --description 'alias dragon-drop=dragon-drop --and-exit --on-top'
+    command dragon-drop --and-exit --on-top $argv
 end

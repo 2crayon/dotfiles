@@ -30,6 +30,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating    issticky    monitor */
 	{ "Dragon-drop",  NULL,       NULL,       0,       1,     1,      -1 },
 	{ "Gfzf",  NULL,       NULL,       0,       1,     1,      -1 },
+
 	{ "code-oss",     NULL,       NULL,       1 << 1,            0,     0,      -1 },
 	{ "Emacs",     NULL,       NULL,       1 << 1,            0,     0,      -1 },
 	{ "obsidian",     NULL,       NULL,       1 << 2,      0,      0,           -1 },
@@ -64,7 +65,6 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "wezterm-gui", NULL };
-static const char *browsercmd[]  = { "google-chrome-stable", NULL };
 static const char *langcmd[]  = { "xkb-switch", "-n", NULL };
 static const char *zoomercmd[]  = { "boomer", NULL };
 static const char *screenshotcmd[]  = { "scrotter", NULL };
@@ -80,12 +80,11 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = termcmd } },
-	{ MODKEY|ShiftMask,             XK_v,      spawn,          {.v = browsercmd } },
 	{ MODKEY,                       XK_Escape, spawn,          {.v = langcmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = zoomercmd } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = screenshotcmd } },
 	{ MODKEY|ShiftMask,             XK_r,      spawn,          {.v = emojicmd } },
-	{ MODKEY,                       XK_q,      spawn,          {.v = colorpickercmd } },
+	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = colorpickercmd } },
 	{ MODKEY,                       XK_l,      spawn,          {.v = bluecmd } },
 	{ MODKEY,                       XK_Delete, spawn,          {.v = sysactioncmd } },
 	{ MODKEY,                       XK_v,      spawn,          {.v = fdcbcmd } },
@@ -105,12 +104,12 @@ static const Key keys[] = {
 	// { MODKEY,                       XK_Down,   incnmaster,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_w,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_w,      setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_Tab,    zoom,           {0} },
+	{ MODKEY,                       XK_q,      zoom,           {0} },
 	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_j,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  togglefloating, {0} },
-	{ MODKEY,                       XK_grave,  focusmon,       {.i = +1 } },
+	{ MODKEY,                       XK_Tab,    focusmon,       {.i = +1 } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)

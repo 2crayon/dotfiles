@@ -10,7 +10,7 @@ set -x SUDO_EDITOR code
 set -x TERMINAL wezterm
 set -x BROWSER google-chrome-stable
 set -x PAGER less
-set -x FZF_DEFAULT_OPTS ""
+set -x FZF_DEFAULT_OPTS --exact
 
 # set -x ARCHFLAGS "-arch x86_64"
 set -x LESS -rMi
@@ -20,7 +20,7 @@ set -x STOW_DIR "$HOME/dotfiles"
 set -x GTK_THEME Adwaita-dark
 set -x QT_QPA_PLATFORMTHEME qt5ct
 set -x COLORTERM truecolor
-set -x CM_LAUNCHER rofi
+# set -x CM_LAUNCHER 
 
 # These env exports are not necessary, as applications
 # should fallback to these values anyways as per the
