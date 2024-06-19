@@ -66,7 +66,8 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function format          argument */
 	{ ram_perc, " MEM %s%% | ", NULL },
-	{ cpu_perc, "CPU %s%% | ", NULL },
+	{ cpu_perc, "CPU %s%% ", NULL },
+	{ run_command, "+%s°C | ", "printf \"%.1f\" $(sensors -j | jq '.\"k10temp-pci-00c3\".Tctl.temp1_input')" },
 	{ disk_perc, "/home=%s%% ", "/home" },
 	{ disk_perc, "/=%s%% | ", "/" },
 	{ run_command, "VOL %s | ", "pamixer --get-volume-human"},
