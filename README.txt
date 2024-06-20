@@ -1,4 +1,4 @@
-Explicitly installed packages on: Thu Jun 13 10:25:39 AM IDT 2024
+Explicitly installed packages on: Thu Jun 20 04:18:41 PM IDT 2024
 adwaita-qt5-git
 adwaita-qt6-git
 alacritty
@@ -14,7 +14,6 @@ bluez
 bluez-utils
 bombadillo
 boomer-git
-borg
 btop
 clang
 clipmenu
@@ -27,6 +26,7 @@ debuginfod
 dnsmasq
 dog
 dragon-drop
+duf
 dunst
 dust
 efibootmgr
@@ -46,8 +46,10 @@ git-delta
 gitui
 gnome-themes-extra
 gnu-netcat
+go
 gobang-bin
 google-chrome
+gparted
 grub
 gst-plugin-pipewire
 hwinfo
@@ -80,12 +82,14 @@ nano
 neofetch
 neovim
 networkmanager
+nm-connection-editor
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 nvidia-lts
 nvidia-utils
+obs-studio
 obsidian
 ollama
 openrazer-daemon
@@ -108,6 +112,7 @@ qt5ct
 qt6-base
 qt6ct
 redshift
+restic
 rustup
 scrcpy
 sd
@@ -152,7 +157,9 @@ xorg-xinit
 xorg-xinput
 xorg-xprop
 xorg-xrdb
+xorg-xset
 xorg-xsetroot
+xsel
 xwallpaper
 yay
 yay-debug
