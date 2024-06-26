@@ -1,7 +1,7 @@
 {
   "security.workspace.trust.untrustedFiles": "open",
   "zig.path": "zig",
-  "zig.zls.path": "/home/ely/.config/Code - OSS/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
+  "zig.zls.path": "zls",
   "zig.initialSetupDone": true,
   "security.promptForLocalFileProtocolHandling": false,
   "zig.zls.enableAutofix": true,
@@ -21,4 +21,5 @@
   "window.density.editorTabHeight": "compact",
   "window.titleBarStyle": "custom",
   "window.customMenuBarAltFocus": false,
+  "workbench.activityBar.location": "hidden"
 }

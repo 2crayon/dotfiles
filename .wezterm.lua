@@ -13,4 +13,9 @@ config.default_cursor_style = 'BlinkingBar'
 config.cursor_thickness = 1
 config.cursor_blink_rate = 500
 
+config.keys = {
+    { key = "UpArrow",   mods = "SHIFT", action = wezterm.action.ScrollToPrompt(-1) },
+    { key = "DownArrow", mods = "SHIFT", action = wezterm.action.ScrollToPrompt(1) },
+}
+
 return config

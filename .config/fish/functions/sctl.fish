@@ -1,4 +1,3 @@
-function sctl --wraps=systemctl --description 'alias sctl=systemctl'
-  systemctl $argv
-        
+function sctl --wraps=systemctl --description 'alias sctl=sudo systemctl'
+    sudo systemctl $argv
 end

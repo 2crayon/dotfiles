@@ -1,4 +1,3 @@
-function cm --wraps=configure_mouse --description 'alias cm=configure_mouse'
-  configure_mouse $argv
-        
+function cm --wraps=configure_input --description 'alias cm=configure_input'
+    configure_input $argv
 end

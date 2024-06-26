@@ -1,4 +1,4 @@
-Explicitly installed packages on: Thu Jun 20 04:18:41 PM IDT 2024
+Explicitly installed packages on: Mon Jun 24 02:02:21 PM IDT 2024
 adwaita-qt5-git
 adwaita-qt6-git
 alacritty
@@ -36,6 +36,7 @@ fd
 firefox
 fish
 fnm-bin
+fsearch
 fuse2
 fzf
 gdb
@@ -52,7 +53,13 @@ google-chrome
 gparted
 grub
 gst-plugin-pipewire
+httpie
 hwinfo
+hyprland
+i3-wm
+i3blocks
+i3lock
+i3status
 imlib2
 inetutils
 inxi
@@ -91,10 +98,9 @@ nvidia-lts
 nvidia-utils
 obs-studio
 obsidian
-ollama
 openrazer-daemon
 openssh
-oterm
+pacman-contrib
 pamixer
 pavucontrol
 php
@@ -118,13 +124,16 @@ scrcpy
 sd
 shell-color-scripts-git
 stow
+sway
 syncthing
 tmux
 todoist-appimage
 trash-cli
 ttf-ancient-fonts
 ttf-cascadia-mono-nerd
+ttf-dejavu
 udiskie
+udisks2
 ueberzugpp
 unzip
 usbutils
@@ -142,6 +151,7 @@ wine-mono
 wireplumber
 xclip
 xcolor
+xdg-user-dirs
 xdg-utils
 xdo
 xh
@@ -168,7 +178,3 @@ zathura
 zathura-pdf-mupdf
 zigup-bin
 zram-generator
-zsh
-zsh-completions
-zsh-syntax-highlighting
-zsh-you-should-use
