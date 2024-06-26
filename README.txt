@@ -1,4 +1,4 @@
-Explicitly installed packages on: Mon Jun 24 02:02:21 PM IDT 2024
+Explicitly installed packages on: Wed Jun 26 01:15:25 PM IDT 2024
 adwaita-qt5-git
 adwaita-qt6-git
 alacritty
@@ -45,6 +45,7 @@ gimp
 git
 git-delta
 gitui
+glfw
 gnome-themes-extra
 gnu-netcat
 go
@@ -55,7 +56,6 @@ grub
 gst-plugin-pipewire
 httpie
 hwinfo
-hyprland
 i3-wm
 i3blocks
 i3lock
@@ -124,7 +124,6 @@ scrcpy
 sd
 shell-color-scripts-git
 stow
-sway
 syncthing
 tmux
 todoist-appimage
