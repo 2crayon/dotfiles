@@ -1,4 +1,3 @@
-function dr --wraps=dragon-drop --description 'alias dr=dragon-drop'
-  dragon-drop $argv
-        
+function dr
+    setsid --fork dragon-drop --and-exit --on-top $argv &>/dev/null
 end

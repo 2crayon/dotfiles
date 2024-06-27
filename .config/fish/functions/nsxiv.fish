@@ -1,3 +1,3 @@
-function nsxiv --wraps='frk nsxiv --animate --anti-alias=no' --description 'alias nsxiv=frk nsxiv --animate --anti-alias=no'
-    frk nsxiv --animate --anti-alias=no $argv
+function nsxiv --wraps='nsxiv --animate --anti-alias=no' --description 'alias nsxiv=nsxiv --animate --anti-alias=no'
+    setsid --fork nsxiv --animate --anti-alias=no $argv &>/dev/null
 end

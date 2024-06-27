@@ -1,3 +1,3 @@
 function dcp
-cp (dragon-drop --target --print-path) .
+    setsid --fork dash -c 'cp -rv $(dragon-drop --and-exit --on-top --target --print-path) .' &>/dev/null
 end

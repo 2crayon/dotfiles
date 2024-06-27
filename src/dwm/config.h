@@ -32,7 +32,6 @@ static const Rule rules[] = {
 	{ "Gfzf",  NULL,       NULL,       0,       1,     1,      -1 },
 
 	{ "code-oss",     NULL,       NULL,       1 << 1,            0,     0,      -1 },
-	{ "Emacs",     NULL,       NULL,       1 << 1,            0,     0,      -1 },
 	{ "obsidian",     NULL,       NULL,       1 << 2,      0,      0,           -1 },
 	{ "Google-chrome",     NULL,       NULL,       1 << 3,      0,      0,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 3,       0,     0,      -1 },

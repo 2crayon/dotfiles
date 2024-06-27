@@ -2,4 +2,4 @@
 chosen=$(cat ~/assets/emoji_list | fzf | cut -d" " -f1)
 [ -z "$chosen" ] && exit 1
 
-echo "$chosen" | nohup >/dev/null 2>/dev/null xclip -sel clip -r
+echo "$chosen" | xsel -ib

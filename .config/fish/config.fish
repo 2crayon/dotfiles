@@ -34,11 +34,11 @@ fnm env --use-on-cd | source
 
 ls --all
 
-# Make commands stay in the prompt when they error
-function _stay_pre --on-event fish_preexec
-    set -g _last_command "$argv"
-end
-function _stay_post --on-event fish_postexec
-    test $status != 0
-    and commandline -i $_last_command
-end
+# # Make commands stay in the prompt when they error
+# function _stay_pre --on-event fish_preexec
+#     set -g _last_command "$argv"
+# end
+# function _stay_post --on-event fish_postexec
+#     test $status != 0
+#     and commandline -i $_last_command
+# end

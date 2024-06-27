@@ -1,4 +1,4 @@
-Explicitly installed packages on: Wed Jun 26 01:15:25 PM IDT 2024
+Explicitly installed packages on: Thu Jun 27 07:14:03 PM IDT 2024
 adwaita-qt5-git
 adwaita-qt6-git
 alacritty
@@ -30,7 +30,6 @@ duf
 dunst
 dust
 efibootmgr
-emacs
 eza
 fd
 firefox
@@ -45,6 +44,7 @@ gimp
 git
 git-delta
 gitui
+glew
 glfw
 gnome-themes-extra
 gnu-netcat
@@ -89,6 +89,7 @@ nano
 neofetch
 neovim
 networkmanager
+nix
 nm-connection-editor
 noto-fonts
 noto-fonts-cjk
