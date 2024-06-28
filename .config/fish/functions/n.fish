@@ -1,3 +1,3 @@
-function n --wraps=nsxiv --description 'alias n=nsxiv'
-    nsxiv $argv
+function n --wraps=nsxiv
+    setsid --fork nsxiv --animate --anti-alias=no $argv &>/dev/null
 end

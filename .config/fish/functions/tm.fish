@@ -1,4 +1,3 @@
 function tm --wraps=tmux --description 'alias tm=tmux'
-  tmux $argv
-        
+    tmux $argv
 end
