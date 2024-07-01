@@ -1,4 +1,3 @@
-function za --wraps=zathura --description 'alias za=zathura'
-  zathura $argv
-        
+function za --wraps=zathura --description 'alias za=zaread'
+    zaread $argv
 end

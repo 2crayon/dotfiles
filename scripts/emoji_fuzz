@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-chosen=$(cat ~/assets/emoji_list | fzf | cut -d" " -f1)
-[ -z "$chosen" ] && exit 1
-
-echo "$chosen" | xsel -ib

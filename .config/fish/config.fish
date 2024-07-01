@@ -12,7 +12,7 @@ set -x BROWSER google-chrome-stable
 set -x PAGER less
 
 # set -x ARCHFLAGS "-arch x86_64"
-set -x FZF_DEFAULT_OPTS --exact
+set -x FZF_DEFAULT_OPTS "--exact --height 20 --reverse --color 16"
 set -x LESS -rMi
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set -x MANROFFOPT -c
@@ -20,7 +20,7 @@ set -x STOW_DIR "$HOME/dotfiles"
 set -x GTK_THEME Adwaita-dark
 set -x QT_QPA_PLATFORMTHEME qt5ct
 set -x COLORTERM truecolor
-set -x CM_LAUNCHER gfzf
+set -x CM_LAUNCHER dmenu
 
 # These env exports are not necessary, as applications
 # should fallback to these values anyways as per the

@@ -1,2 +1,0 @@
-#!/usr/bin/env dash
-exec st -f "monospace:pixelsize=18:antialias=true:autohint=true" -c Gfzf -g 130x40 sh -c "exec fzf --color=16 --border \"\$@\" < /proc/$$/fd/0 > /proc/$$/fd/1" -- "$@"

@@ -1,0 +1,27 @@
+
+
+[volume]
+command=echo "VOL: $(pamixer --get-volume-human)"
+interval=1
+
+[lang]
+command=xkb-switch
+interval=1
+
+[weather]
+command=curl -Ss 'https://wttr.in/Herzlia?0&T&Q' | cut -c 16- | head -2 | xargs echo
+interval=3600
+color=#A4C2F4
+
+[time]
+command=date +"%H:%M %a %Y-%m-%d"
+interval=60
+full_text="Time:"
+
+# [terminal]
+# command=i3-sensible-terminal
+# full_text=" "
+
+[sysaction]
+command=sysaction
+full_text="󰐥 "

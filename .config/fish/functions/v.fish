@@ -1,3 +1,3 @@
-function v --wraps='fd_clipboard .' --wraps='fd_clipboard . -' --description 'alias v=fd_clipboard . -'
-  fd_clipboard . - $argv
+function v --wraps=fzf_copy --description 'alias v=fzf_copy'
+    fzf_copy $argv
 end

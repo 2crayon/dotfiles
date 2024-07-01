@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+chosen=$(cat ~/assets/emoji_list | dmenu -l 20 | cut -d" " -f1)
+[ -z "$chosen" ] && exit 1
+
+echo "$chosen" | xclip -sel clipboard -rmlastnl
